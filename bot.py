@@ -46,7 +46,7 @@ async def get_ai_response(user_id: int, user_message: str) -> str:
         user_histories[user_id] = user_histories[user_id][-20:]
     try:
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=1000,
             system=SYSTEM_PROMPT,
             messages=user_histories[user_id]
